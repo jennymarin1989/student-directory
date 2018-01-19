@@ -1,18 +1,18 @@
 def input_students
-puts "Please enter the names of the students"
-puts "To finish, just hit return twice"
+  puts "Please enter the names of the students"
+  puts "To finish, just hit return twice"
 # Create an empty array to push the name of input_students
-students = []
+  students = []
 # Get the first name with gets.chomp
-name = gets.chomp
-# Create a loop to keep running while name is not empty
-while !name.empty? do
-#push each student hash into students array
-  students << {name: name, cohort: :november}
-  puts "Now we are #{students.count} students"
-# get another name from the user
   name = gets.chomp
-end
+# Create a loop to keep running while name is not empty
+  while !name.empty? do
+#push each student hash into students array
+    students << {name: name, cohort: :november}
+    puts "Now we are #{students.count} students"
+# get another name from the user
+    name = gets.chomp
+  end
   return students
 end
 
@@ -23,6 +23,7 @@ def print_header
 end
 
 =begin
+
 # this method will print the list of students
 def print(students)
   students.each_with_index do |student,index|
@@ -32,9 +33,10 @@ end
     name = student[:name]
      if name.length < 12 && name[0] == "T"
        puts name
-    end
+     end
   end
 end
+
 =end
 # this method will print the footer
 
